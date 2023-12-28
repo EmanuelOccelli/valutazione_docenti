@@ -1,9 +1,18 @@
+import logo from './logo.svg';
+import './App.css';
+
 import React from 'react'
 
-const login = () => {
+const App = () => {
   return (
-    <div>login</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          merda
+        </div>
+      </div>
+    </div>
   )
 }
 
-export default login
+export default App
