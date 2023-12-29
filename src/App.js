@@ -6,7 +6,7 @@ let mail=""
 let pass
 
 const App = () => {
-  const [miamail,setMiamail] = useState("")
+  const [miaMail,setMiamail] = useState("")
   const leggimail = (param) => {
     mail=param.target.value
     setMiamail(param.target.value)
@@ -14,14 +14,10 @@ const App = () => {
   const leggipsw = (param) => {
     pass=param.target.value
   }
-  const visualizza = () =>{
-    console.log("Benvenuto" +" "+ mail)
-   
-    return (
-      <p>Ciao {miamail}</p>
-    )
+  const [ris, setris] = useState("")
+  const visualizza =()=>{
+    setris(miaMail)
   }
-  
   return (
     <div className="container margcont  centra">
       <div className="row bordo">
@@ -45,7 +41,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="col-12 bordo centra">{visualizza()}</div>
+        <div className="col-12 bordo centra">{ris}</div>
       </div>
     </div>
   )
