@@ -1,4 +1,5 @@
 import './Login.css'
+import { Outlet, Link } from "react-router-dom";
 import React, {useState,useRef} from 'react'
 let mail=""
 let pass=""
@@ -17,7 +18,7 @@ const Login = () => {
   const visualizza=()=>{
     
     if (miaMail==mail && MiaPassword==pass){
-      setris(mail)
+      setris(<Link to="/contact">Lista_prof</Link>)
     }else if(miaMail!=mail && MiaPassword==pass){
       setris("Nome utente sbagliato")
     }else if(miaMail==mail && MiaPassword!=pass){
@@ -51,6 +52,7 @@ const Login = () => {
         </div>
         <div className="col-12 bordo centra">{ris}</div>
       </div>
+      < Outlet/>
     </div>
   )
 }
